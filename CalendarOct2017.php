@@ -36,16 +36,7 @@ echo "<table>";
                 if (date("D",mktime(0,0,0,10,1,2017))==$semana[$i]){ 
                 // "D" --> A textual representation of a day, three letters. 
                 //Si el día de la semana se corresponde con los días del array, píntame los días en formato numérico
-                    echo "<td>". date("d", mktime(0,0,0,10,1,2017)) ."</td>";
-
-                    /*if (date("D",mktime(0,0,0,10,1,2017))=="Sun" ){ //Si el día de la semana se corresponde con "Domingo"
-                        //echo "<td>". "</td>";
-                        break;
-                    }else{
-                        break;
-                    }
-
-                    break;  */      
+                    echo "<td>". date("d", mktime(0,0,0,10,1,2017)) ."</td>";   
                 }
                 else{
                     echo  "<td>". "</td>"  ; //Deja en blanco 6 casillas que corresponden con el "Sun"
@@ -53,7 +44,7 @@ echo "<table>";
                 }
     echo "</tr>";
 
-///Proyectamos los días siguientes:
+//Proyecta los días siguientes:
 
 for ($j=2;$j<=date("t",mktime(0,0,0,10,1,2017));$j++){ //t --> Number of days in the given month
     //Recorre la siguiente semana a partir del día 2
